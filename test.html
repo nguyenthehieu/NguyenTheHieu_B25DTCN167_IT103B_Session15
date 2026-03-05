@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    form, h1{
+        margin: 20px;
+        padding: 10px;
+    }
+    input {
+        margin: 10px 0;
+        background-color: rgba(128, 128, 128, 0.126);
+    }
+    button {
+        background-color: gray;
+        color: white;
+        border: 1px white solid;
+        width: 100px;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <h1>Đăng ký</h1>
+    <form action="" id="form">
+        <label for="email">Email</label>
+        <br>
+        <input type="text" id="email">
+        <br>
+        <label for="password">Mật khẩu</label>
+        <br>
+        <input type="password" id="password">
+        <br>
+        <label for="rePassword">Nhập lại mật khẩu</label>
+        <br>
+        <input type="password" id="rePassword">
+        <br>
+        <br>
+        <button type="submit">Đăng ký</button>
+    </form>
+    <script>
+        const form = document.getElementById('form');
+        form.addEventListener("submit", ()=>{
+             
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const rePassword = document.getElementById('rePassword').value;
+            console.log('email:', email, 'password:', password, 'rePassword:', rePassword);
+            
+        });
+           
+        
+    </script>
+</body>
+</html>
